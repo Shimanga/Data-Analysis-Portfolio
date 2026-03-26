@@ -4,232 +4,328 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Shimanga Mubitana Portfolio</title>
+
 <style>
-    body {
-        margin: 0;
-        font-family: 'Arial', sans-serif;
-        line-height: 1.6;
-        background-color: #ffffff;
-        color: #000000;
-    }
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #ffffff;
+    color: #000;
+}
 
-    header {
-        background-color: #0b3d02; /* dark green */
-        color: #ffffff;
-        text-align: center;
-        padding: 50px 20px;
-    }
+/* HERO */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
 
-    header h1 {
-        margin: 0;
-        font-size: 3em;
-    }
+.hero-left h1 {
+    margin-top: 15px;
+    font-size: 2.5em;
+}
 
-    header p {
-        font-size: 1.2em;
-        margin-top: 10px;
-    }
+.circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    text-align: center;
+}
 
-    section {
-        padding: 60px 20px;
-        max-width: 1200px;
-        margin: 0 auto;
-    }
+.mustard {
+    background: #d4a017;
+}
 
-    section h2 {
-        text-align: center;
-        margin-bottom: 50px;
-        font-size: 2.2em;
-        color: #0b3d02;
-    }
+.profile-img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+}
 
-    .projects-container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 25px;
-        justify-content: center;
-    }
+/* SECTIONS */
+section {
+    padding: 70px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
 
-    .project-block {
-        background-color: #f7f9f5;
-        padding: 25px;
-        flex: 1 1 300px;
-        max-width: 350px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        border-radius: 10px;
-        transition: transform 0.3s, box-shadow 0.3s;
-    }
+h2 {
+    text-align: center;
+    color: #0b3d02;
+}
 
-    .project-block:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-    }
+h2::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #0b3d02;
+    margin: 10px auto;
+}
 
-    .project-block h3 {
-        margin-top: 0;
-        font-size: 1.25em;
-        color: #0b3d02;
-    }
+/* ABOUT */
+#about p {
+    text-align: center;
+    max-width: 700px;
+    margin: auto;
+}
 
-    .project-block p {
-        font-size: 0.95em;
-    }
+/* PROJECTS */
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+}
 
-    .project-block a {
-        display: inline-block;
-        margin-top: 15px;
-        background-color: #0b3d02;
-        color: #ffffff;
-        padding: 10px 15px;
-        text-decoration: none;
-        border-radius: 6px;
-        font-weight: bold;
-        transition: background-color 0.3s;
-    }
+.project-block {
+    background: #f7f9f5;
+    padding: 25px;
+    max-width: 320px;
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+    transition: 0.3s;
+}
 
-    .project-block a:hover {
-        background-color: #006400; /* brighter green */
-    }
+.project-block:hover {
+    transform: translateY(-5px);
+}
 
-    .skills, .contact {
-        background-color: #e6f0e6;
-        border-radius: 10px;
-        padding: 25px;
-        max-width: 800px;
-        margin: 50px auto;
-        text-align: center;
-    }
+.project-number {
+    font-size: 40px;
+    font-weight: bold;
+    color: #d4a017;
+}
 
-    .skills h3, .contact h3 {
-        margin-top: 0;
-        color: #0b3d02;
-    }
+.project-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 10px 0;
+}
 
-    .skills p, .contact p {
-        font-size: 1em;
-    }
+.project-block a {
+    display: inline-block;
+    margin-top: 10px;
+    background: #0b3d02;
+    color: #fff;
+    padding: 8px 14px;
+    text-decoration: none;
+    border-radius: 5px;
+}
 
-    footer {
-        background-color: #0b3d02;
-        color: #ffffff;
-        text-align: center;
-        padding: 35px 20px;
-    }
+.project-block a:hover {
+    background: #145a0a;
+}
 
-    a {
-        color: #0b3d02;
-        text-decoration: none;
-    }
+/* SKILLS */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
 
-    a:hover {
-        text-decoration: underline;
-    }
+.skill-card {
+    background: #f7f9f5;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid #e0e0e0;
+}
 
-    @media (max-width: 768px) {
-        .projects-container {
-            flex-direction: column;
-            align-items: center;
-        }
-    }
+.icon {
+    font-size: 28px;
+}
+
+/* CONTACT */
+.contact {
+    text-align: center;
+    background: #e6f0e6;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #0b3d02;
+    color: #fff;
+}
 </style>
 </head>
+
 <body>
 
-<header>
-    <h1>Shimanga Mubitana</h1>
-    <p>Portfolio Project</p>
+<!-- HERO -->
+<header class="hero">
+    <div class="hero-left">
+        <div class="circle mustard">Project Portfolio</div>
+        <h1>Shimanga Mubitana</h1>
+    </div>
+
+    <div class="hero-right">
+        <img src="your-photo.jpg" class="profile-img">
+    </div>
 </header>
 
+<!-- ABOUT -->
 <section id="about">
     <h2>About This Portfolio</h2>
-    <p>This portfolio showcases applied agri-data analytics, operational optimization, and risk management insights. Projects are organized by region to highlight market-relevant expertise, data-driven decision-making, and ESG-aware analysis. Each project links to its full GitHub repository for detailed methodology, dashboards, and deliverables.</p>
+    <p>
+        This portfolio showcases applied agri-data analytics, operational optimization, 
+        and risk management insights. Projects highlight real-world decision-making, 
+        financial impact analysis, and sustainability considerations across agricultural systems.
+    </p>
 </section>
 
-<section id="germany">
+<!-- GERMANY -->
+<section>
     <h2>Germany Projects</h2>
     <div class="projects-container">
+
         <div class="project-block">
-            <h3>Dairy Herd Health and Profit Impact</h3>
-            <p>Analyzes commercial dairy systems to quantify the financial and operational impact of disease events. Includes dashboards and scenario analyses for herd management decisions.</p>
+            <div class="project-number">01</div>
+            <h3>Dairy Herd Health</h3>
+            <img src="img1.jpg" class="project-img">
+            <p>Quantifies financial impact of disease events in dairy herds using yield, treatment cost and culling data.</p>
             <a href="#">View Project</a>
         </div>
+
         <div class="project-block">
-            <h3>Sustainability Metrics vs Financial Margin</h3>
-            <p>Links CO₂ footprint and nitrogen use efficiency to financial performance. Demonstrates the operational and strategic value of sustainable farming practices.</p>
+            <div class="project-number">02</div>
+            <h3>Sustainability vs Margin</h3>
+            <img src="img2.jpg" class="project-img">
+            <p>Links emissions and nitrogen efficiency to profitability, showing ESG-driven cost trade-offs.</p>
             <a href="#">View Project</a>
         </div>
+
         <div class="project-block">
-            <h3>Yield Forecasting and Risk Scenario Modeling</h3>
-            <p>Predictive modeling of farm yield under variable climate and disease scenarios. Delivers scenario visualizations and risk curves to inform investment decisions.</p>
+            <div class="project-number">03</div>
+            <h3>Yield Risk Modelling</h3>
+            <img src="img3.jpg" class="project-img">
+            <p>Predictive modelling of yield under climate and disease scenarios with risk-adjusted outputs.</p>
             <a href="#">View Project</a>
         </div>
+
     </div>
 </section>
 
-<section id="southafrica">
+<!-- SOUTH AFRICA -->
+<section>
     <h2>South Africa Projects</h2>
     <div class="projects-container">
+
         <div class="project-block">
-            <h3>Feed Conversion & Margin per Animal</h3>
-            <p>Evaluates beef finishing operations with feed intake, weight gain, and margin analysis. Highlights operational efficiency and optimal slaughter timing.</p>
+            <div class="project-number">04</div>
+            <h3>Feed Conversion</h3>
+            <img src="img4.jpg" class="project-img">
+            <p>Evaluates feed efficiency and margin per animal in beef finishing systems.</p>
             <a href="#">View Project</a>
         </div>
+
         <div class="project-block">
-            <h3>Harvest Throughput & Equipment Utilisation</h3>
-            <p>Assesses machinery performance on large-scale farms. Calculates cost per tonne, identifies bottlenecks, and models efficiency gains.</p>
+            <div class="project-number">05</div>
+            <h3>Equipment Utilisation</h3>
+            <img src="img5.jpg" class="project-img">
+            <p>Analyzes machinery productivity, idle time and cost per tonne harvested.</p>
             <a href="#">View Project</a>
         </div>
+
         <div class="project-block">
-            <h3>Irrigation Intensity and Yield Response</h3>
-            <p>Analyzes water use efficiency, yield response, and over-irrigation costs. Provides operational and strategic insights for sustainable irrigation investments.</p>
+            <div class="project-number">06</div>
+            <h3>Irrigation Efficiency</h3>
+            <img src="img6.jpg" class="project-img">
+            <p>Assesses water use efficiency and financial impact of over-irrigation.</p>
             <a href="#">View Project</a>
         </div>
+
     </div>
 </section>
 
-<section id="zambia">
+<!-- ZAMBIA -->
+<section>
     <h2>Zambia Projects</h2>
     <div class="projects-container">
+
         <div class="project-block">
-            <h3>Maize Yield vs Climate</h3>
-            <p>Evaluates maize yield trends relative to climate variables, analyzing operational performance and strategic financial impact of climate variability.</p>
+            <div class="project-number">07</div>
+            <h3>Maize vs Climate</h3>
+            <img src="img7.jpg" class="project-img">
+            <p>Analyzes climate variability impact on maize yield and production stability.</p>
             <a href="#">View Project</a>
         </div>
+
         <div class="project-block">
-            <h3>Crop Market Price & Revenue Trends</h3>
-            <p>Tracks crop price and revenue fluctuations, analyzes market risk, and identifies optimal sales timing for financial decision-making.</p>
+            <div class="project-number">08</div>
+            <h3>Market Price Trends</h3>
+            <img src="img8.jpg" class="project-img">
+            <p>Tracks crop price volatility and revenue sensitivity across regions.</p>
             <a href="#">View Project</a>
         </div>
+
         <div class="project-block">
-            <h3>Poultry Production Cost & Margin Analysis</h3>
-            <p>Models broiler production costs, margin per batch, and risk scenarios like feed price shocks or mortality reduction. Delivers actionable operational insights.</p>
+            <div class="project-number">09</div>
+            <h3>Poultry Margin Analysis</h3>
+            <img src="img9.jpg" class="project-img">
+            <p>Models broiler production cost, margin and feed price risk scenarios.</p>
             <a href="#">View Project</a>
         </div>
+
     </div>
 </section>
 
-<section class="skills">
-    <h3>Skills</h3>
-    <div class="projects-container">
-        <div class="project-block">
-            <h3>Technical Skills</h3>
-            <p>Python, SQL, Excel, Tableau, Dashboard Development, Yield & Risk Modelling, Operational Analytics, ESG Analysis</p>
+<!-- SKILLS -->
+<section>
+    <h2>Skills</h2>
+    <div class="skills-grid">
+
+        <div class="skill-card">
+            <div class="icon">💻</div>
+            <h4>Data Tools</h4>
+            <p>Python, SQL, Excel, Tableau</p>
         </div>
-        <div class="project-block">
-            <h3>Other Skills</h3>
-            <p>Data Cleaning & Validation, Scenario Analysis, Problem Solving, Critical Thinking, Report Writing, Project Management, Market & Financial Analysis</p>
+
+        <div class="skill-card">
+            <div class="icon">📊</div>
+            <h4>Analytics</h4>
+            <p>Operational, Scenario, ESG Analysis</p>
         </div>
+
+        <div class="skill-card">
+            <div class="icon">📈</div>
+            <h4>Modelling</h4>
+            <p>Yield, Risk, Forecasting</p>
+        </div>
+
+        <div class="skill-card">
+            <div class="icon">🧠</div>
+            <h4>Business Thinking</h4>
+            <p>Financial Analysis, Decision Support</p>
+        </div>
+
     </div>
 </section>
 
+<!-- CONTACT -->
 <section class="contact">
     <h3>Contact</h3>
-    <p>Phone: +260961743210</p>
-    <p>Email: <a href="mailto:shimangam@yahoo.co.uk">shimangam@yahoo.co.uk</a></p>
+    <p>📞 +260961743210</p>
+    <p>📧 shimangam@yahoo.co.uk</p>
+    <p>🔗 <a href="#">LinkedIn Profile</a></p>
 </section>
 
 <footer>
-    &copy; 2026 Shimanga Mubitana
+    © 2026 Shimanga Mubitana
 </footer>
 
 </body>
