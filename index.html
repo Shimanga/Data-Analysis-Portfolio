@@ -6,6 +6,8 @@
 <title>Shimanga Mubitana Portfolio</title>
 
 <style>
+
+/* BASE */
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
@@ -18,34 +20,36 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 50px 20px;
+    padding: 60px 20px;
     max-width: 1100px;
     margin: auto;
 }
 
-.hero-left h1 {
-    margin-top: 15px;
-    font-size: 2.5em;
-}
-
 .circle {
-    width: 120px;
-    height: 120px;
+    width: 110px;
+    height: 110px;
     border-radius: 50%;
+    background: #d4a017;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: bold;
-    text-align: center;
 }
 
-.mustard {
-    background: #d4a017;
+.hero-left h1 {
+    margin: 15px 0 5px;
+    font-size: 2.6em;
+    font-weight: 600;
+}
+
+.subtitle {
+    color: #444;
+    font-size: 0.95em;
 }
 
 .profile-img {
-    width: 140px;
-    height: 140px;
+    width: 130px;
+    height: 130px;
     border-radius: 50%;
     object-fit: cover;
 }
@@ -59,23 +63,16 @@ section {
 
 h2 {
     text-align: center;
+    font-size: 1.9em;
+    font-weight: 500;
     color: #0b3d02;
-}
-
-h2::after {
-    content: "";
-    display: block;
-    width: 50px;
-    height: 3px;
-    background: #0b3d02;
-    margin: 10px auto;
 }
 
 /* ABOUT */
 #about p {
     text-align: center;
     max-width: 700px;
-    margin: auto;
+    margin: 10px auto 0;
 }
 
 /* PROJECTS */
@@ -100,16 +97,16 @@ h2::after {
 }
 
 .project-number {
-    font-size: 40px;
+    font-size: 36px;
     font-weight: bold;
     color: #d4a017;
 }
 
 .project-img {
     width: 100%;
-    height: 180px;
+    height: 170px;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 6px;
     margin: 10px 0;
 }
 
@@ -119,31 +116,33 @@ h2::after {
     background: #0b3d02;
     color: #fff;
     padding: 8px 14px;
-    text-decoration: none;
     border-radius: 5px;
-}
-
-.project-block a:hover {
-    background: #145a0a;
+    text-decoration: none;
 }
 
 /* SKILLS */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
+    gap: 25px;
 }
 
 .skill-card {
     background: #f7f9f5;
     padding: 25px;
     border-radius: 10px;
-    text-align: center;
     border: 1px solid #e0e0e0;
+    text-align: center;
 }
 
-.icon {
-    font-size: 28px;
+.skill-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+}
+
+.skill-card li {
+    margin: 6px 0;
 }
 
 /* CONTACT */
@@ -157,10 +156,11 @@ h2::after {
 /* FOOTER */
 footer {
     text-align: center;
-    padding: 30px;
+    padding: 25px;
     background: #0b3d02;
-    color: #fff;
+    color: white;
 }
+
 </style>
 </head>
 
@@ -169,13 +169,12 @@ footer {
 <!-- HERO -->
 <header class="hero">
     <div class="hero-left">
-        <div class="circle mustard">Project Portfolio</div>
+        <div class="circle">Portfolio</div>
         <h1>Shimanga Mubitana</h1>
+        <p class="subtitle">Agri-Data Analyst | Yield & Risk Analytics</p>
     </div>
 
-    <div class="hero-right">
-        <img src="your-photo.jpg" class="profile-img">
-    </div>
+    <img src="your-photo.jpg" class="profile-img">
 </header>
 
 <!-- ABOUT -->
@@ -183,21 +182,22 @@ footer {
     <h2>About This Portfolio</h2>
     <p>
         This portfolio showcases applied agri-data analytics, operational optimization, 
-        and risk management insights. Projects highlight real-world decision-making, 
-        financial impact analysis, and sustainability considerations across agricultural systems.
+        and risk modelling across agricultural systems. The focus is on translating data 
+        into practical financial and operational decisions.
     </p>
 </section>
 
-<!-- GERMANY -->
+<!-- PROJECTS (Example structure only – repeat pattern) -->
 <section>
     <h2>Germany Projects</h2>
+
     <div class="projects-container">
 
         <div class="project-block">
             <div class="project-number">01</div>
             <h3>Dairy Herd Health</h3>
             <img src="img1.jpg" class="project-img">
-            <p>Quantifies financial impact of disease events in dairy herds using yield, treatment cost and culling data.</p>
+            <p>Quantifies financial impact of disease events in dairy systems.</p>
             <a href="#">View Project</a>
         </div>
 
@@ -205,79 +205,15 @@ footer {
             <div class="project-number">02</div>
             <h3>Sustainability vs Margin</h3>
             <img src="img2.jpg" class="project-img">
-            <p>Links emissions and nitrogen efficiency to profitability, showing ESG-driven cost trade-offs.</p>
+            <p>Links emissions and efficiency metrics to profitability.</p>
             <a href="#">View Project</a>
         </div>
 
         <div class="project-block">
             <div class="project-number">03</div>
-            <h3>Yield Risk Modelling</h3>
+            <h3>Yield Risk Model</h3>
             <img src="img3.jpg" class="project-img">
-            <p>Predictive modelling of yield under climate and disease scenarios with risk-adjusted outputs.</p>
-            <a href="#">View Project</a>
-        </div>
-
-    </div>
-</section>
-
-<!-- SOUTH AFRICA -->
-<section>
-    <h2>South Africa Projects</h2>
-    <div class="projects-container">
-
-        <div class="project-block">
-            <div class="project-number">04</div>
-            <h3>Feed Conversion</h3>
-            <img src="img4.jpg" class="project-img">
-            <p>Evaluates feed efficiency and margin per animal in beef finishing systems.</p>
-            <a href="#">View Project</a>
-        </div>
-
-        <div class="project-block">
-            <div class="project-number">05</div>
-            <h3>Equipment Utilisation</h3>
-            <img src="img5.jpg" class="project-img">
-            <p>Analyzes machinery productivity, idle time and cost per tonne harvested.</p>
-            <a href="#">View Project</a>
-        </div>
-
-        <div class="project-block">
-            <div class="project-number">06</div>
-            <h3>Irrigation Efficiency</h3>
-            <img src="img6.jpg" class="project-img">
-            <p>Assesses water use efficiency and financial impact of over-irrigation.</p>
-            <a href="#">View Project</a>
-        </div>
-
-    </div>
-</section>
-
-<!-- ZAMBIA -->
-<section>
-    <h2>Zambia Projects</h2>
-    <div class="projects-container">
-
-        <div class="project-block">
-            <div class="project-number">07</div>
-            <h3>Maize vs Climate</h3>
-            <img src="img7.jpg" class="project-img">
-            <p>Analyzes climate variability impact on maize yield and production stability.</p>
-            <a href="#">View Project</a>
-        </div>
-
-        <div class="project-block">
-            <div class="project-number">08</div>
-            <h3>Market Price Trends</h3>
-            <img src="img8.jpg" class="project-img">
-            <p>Tracks crop price volatility and revenue sensitivity across regions.</p>
-            <a href="#">View Project</a>
-        </div>
-
-        <div class="project-block">
-            <div class="project-number">09</div>
-            <h3>Poultry Margin Analysis</h3>
-            <img src="img9.jpg" class="project-img">
-            <p>Models broiler production cost, margin and feed price risk scenarios.</p>
+            <p>Forecasting yield under climate and disease risk scenarios.</p>
             <a href="#">View Project</a>
         </div>
 
@@ -286,31 +222,45 @@ footer {
 
 <!-- SKILLS -->
 <section>
-    <h2>Skills</h2>
+    <h2>Technical Skills</h2>
+
     <div class="skills-grid">
 
         <div class="skill-card">
-            <div class="icon">💻</div>
             <h4>Data Tools</h4>
-            <p>Python, SQL, Excel, Tableau</p>
+            <ul>
+                <li>Python</li>
+                <li>SQL</li>
+                <li>Excel</li>
+                <li>Tableau</li>
+            </ul>
         </div>
 
         <div class="skill-card">
-            <div class="icon">📊</div>
             <h4>Analytics</h4>
-            <p>Operational, Scenario, ESG Analysis</p>
+            <ul>
+                <li>Operational Analysis</li>
+                <li>Scenario Analysis</li>
+                <li>ESG Analysis</li>
+            </ul>
         </div>
 
         <div class="skill-card">
-            <div class="icon">📈</div>
             <h4>Modelling</h4>
-            <p>Yield, Risk, Forecasting</p>
+            <ul>
+                <li>Yield Modelling</li>
+                <li>Risk Modelling</li>
+                <li>Forecasting</li>
+            </ul>
         </div>
 
         <div class="skill-card">
-            <div class="icon">🧠</div>
             <h4>Business Thinking</h4>
-            <p>Financial Analysis, Decision Support</p>
+            <ul>
+                <li>Financial Analysis</li>
+                <li>Decision Support</li>
+                <li>Market Insight</li>
+            </ul>
         </div>
 
     </div>
@@ -321,7 +271,7 @@ footer {
     <h3>Contact</h3>
     <p>📞 +260961743210</p>
     <p>📧 shimangam@yahoo.co.uk</p>
-    <p>🔗 <a href="#">LinkedIn Profile</a></p>
+    <p>🔗 <a href="#">LinkedIn</a></p>
 </section>
 
 <footer>
