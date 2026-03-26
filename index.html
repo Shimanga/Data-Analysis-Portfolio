@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shimanga Mubitana Portfolio</title>
+<style>
+    body {
+        margin: 0;
+        font-family: 'Arial', sans-serif;
+        line-height: 1.6;
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+    header {
+        background-color: #0b3d02; /* dark green */
+        color: #ffffff;
+        text-align: center;
+        padding: 50px 20px;
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 3em;
+    }
+
+    header p {
+        font-size: 1.2em;
+        margin-top: 10px;
+    }
+
+    section {
+        padding: 60px 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    section h2 {
+        text-align: center;
+        margin-bottom: 50px;
+        font-size: 2.2em;
+        color: #0b3d02;
+    }
+
+    .projects-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 25px;
+        justify-content: center;
+    }
+
+    .project-block {
+        background-color: #f7f9f5;
+        padding: 25px;
+        flex: 1 1 300px;
+        max-width: 350px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        border-radius: 10px;
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .project-block:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .project-block h3 {
+        margin-top: 0;
+        font-size: 1.25em;
+        color: #0b3d02;
+    }
+
+    .project-block p {
+        font-size: 0.95em;
+    }
+
+    .project-block a {
+        display: inline-block;
+        margin-top: 15px;
+        background-color: #0b3d02;
+        color: #ffffff;
+        padding: 10px 15px;
+        text-decoration: none;
+        border-radius: 6px;
+        font-weight: bold;
+        transition: background-color 0.3s;
+    }
+
+    .project-block a:hover {
+        background-color: #006400; /* brighter green */
+    }
+
+    .skills, .contact {
+        background-color: #e6f0e6;
+        border-radius: 10px;
+        padding: 25px;
+        max-width: 800px;
+        margin: 50px auto;
+        text-align: center;
+    }
+
+    .skills h3, .contact h3 {
+        margin-top: 0;
+        color: #0b3d02;
+    }
+
+    .skills p, .contact p {
+        font-size: 1em;
+    }
+
+    footer {
+        background-color: #0b3d02;
+        color: #ffffff;
+        text-align: center;
+        padding: 35px 20px;
+    }
+
+    a {
+        color: #0b3d02;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+        .projects-container {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Shimanga Mubitana</h1>
+    <p>Portfolio Project</p>
+</header>
+
+<section id="about">
+    <h2>About This Portfolio</h2>
+    <p>This portfolio showcases applied agri-data analytics, operational optimization, and risk management insights. Projects are organized by region to highlight market-relevant expertise, data-driven decision-making, and ESG-aware analysis. Each project links to its full GitHub repository for detailed methodology, dashboards, and deliverables.</p>
+</section>
+
+<section id="germany">
+    <h2>Germany Projects</h2>
+    <div class="projects-container">
+        <div class="project-block">
+            <h3>Dairy Herd Health and Profit Impact</h3>
+            <p>Analyzes commercial dairy systems to quantify the financial and operational impact of disease events. Includes dashboards and scenario analyses for herd management decisions.</p>
+            <a href="#">View Project</a>
+        </div>
+        <div class="project-block">
+            <h3>Sustainability Metrics vs Financial Margin</h3>
+            <p>Links CO₂ footprint and nitrogen use efficiency to financial performance. Demonstrates the operational and strategic value of sustainable farming practices.</p>
+            <a href="#">View Project</a>
+        </div>
+        <div class="project-block">
+            <h3>Yield Forecasting and Risk Scenario Modeling</h3>
+            <p>Predictive modeling of farm yield under variable climate and disease scenarios. Delivers scenario visualizations and risk curves to inform investment decisions.</p>
+            <a href="#">View Project</a>
+        </div>
+    </div>
+</section>
+
+<section id="southafrica">
+    <h2>South Africa Projects</h2>
+    <div class="projects-container">
+        <div class="project-block">
+            <h3>Feed Conversion & Margin per Animal</h3>
+            <p>Evaluates beef finishing operations with feed intake, weight gain, and margin analysis. Highlights operational efficiency and optimal slaughter timing.</p>
+            <a href="#">View Project</a>
+        </div>
+        <div class="project-block">
+            <h3>Harvest Throughput & Equipment Utilisation</h3>
+            <p>Assesses machinery performance on large-scale farms. Calculates cost per tonne, identifies bottlenecks, and models efficiency gains.</p>
+            <a href="#">View Project</a>
+        </div>
+        <div class="project-block">
+            <h3>Irrigation Intensity and Yield Response</h3>
+            <p>Analyzes water use efficiency, yield response, and over-irrigation costs. Provides operational and strategic insights for sustainable irrigation investments.</p>
+            <a href="#">View Project</a>
+        </div>
+    </div>
+</section>
+
+<section id="zambia">
+    <h2>Zambia Projects</h2>
+    <div class="projects-container">
+        <div class="project-block">
+            <h3>Maize Yield vs Climate</h3>
+            <p>Evaluates maize yield trends relative to climate variables, analyzing operational performance and strategic financial impact of climate variability.</p>
+            <a href="#">View Project</a>
+        </div>
+        <div class="project-block">
+            <h3>Crop Market Price & Revenue Trends</h3>
+            <p>Tracks crop price and revenue fluctuations, analyzes market risk, and identifies optimal sales timing for financial decision-making.</p>
+            <a href="#">View Project</a>
+        </div>
+        <div class="project-block">
+            <h3>Poultry Production Cost & Margin Analysis</h3>
+            <p>Models broiler production costs, margin per batch, and risk scenarios like feed price shocks or mortality reduction. Delivers actionable operational insights.</p>
+            <a href="#">View Project</a>
+        </div>
+    </div>
+</section>
+
+<section class="skills">
+    <h3>Skills</h3>
+    <div class="projects-container">
+        <div class="project-block">
+            <h3>Technical Skills</h3>
+            <p>Python, SQL, Excel, Tableau, Dashboard Development, Yield & Risk Modelling, Operational Analytics, ESG Analysis</p>
+        </div>
+        <div class="project-block">
+            <h3>Other Skills</h3>
+            <p>Data Cleaning & Validation, Scenario Analysis, Problem Solving, Critical Thinking, Report Writing, Project Management, Market & Financial Analysis</p>
+        </div>
+    </div>
+</section>
+
+<section class="contact">
+    <h3>Contact</h3>
+    <p>Phone: +260961743210</p>
+    <p>Email: <a href="mailto:shimangam@yahoo.co.uk">shimangam@yahoo.co.uk</a></p>
+</section>
+
+<footer>
+    &copy; 2026 Shimanga Mubitana
+</footer>
+
+</body>
+</html>
